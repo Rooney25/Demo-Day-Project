@@ -1,6 +1,6 @@
 let searchText1 = document.getElementById('searchText1');
 let searchText2 = document.getElementById('searchText2');
-document.getElementById("submit").addEventListener('click', search);
+document.getElementById("search").addEventListener('click', search);
 let data;
 function search(event) {
     event.preventDefault();
@@ -18,17 +18,14 @@ function search(event) {
                     const ranRat = myJson.schoolList[i].rankHistory[0].rank;
                     const outOf = myJson.schoolList[i].rankHistory[0].rankOf;
                     const ranStars = myJson.schoolList[i].rankHistory[0].rankStars;
-
                     const paragraph = document.createElement("p");
                     const text = document.createElement("ul");
                     const sName = document.createElement("li");
                     const sRat = document.createElement("li");
                     const sStars = document.createElement("li");
-
                     sName.innerText = ranName;
                     sRat.innerText = "Rank " + ranRat + " out of " + outOf;
                     sStars.innerText = ranStars + " stars";
-
                     text.appendChild(sName);
                     text.appendChild(sRat);
                     text.appendChild(sStars);
